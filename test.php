@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@ $TMNT = array('Leonardo' 		=> array('weapon'	=>	'katana',
 			  'Raphael'			=>	array('weapon'	=>	'sai',
 				  						  'color'	=>	'red'));
 										  
-(new PrintTree)->output($TMNT, true);
+(new PrintTree(true))->output($TMNT, true);
 ?>
 </body>
 </html>
