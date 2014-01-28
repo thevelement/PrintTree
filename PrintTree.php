@@ -28,7 +28,7 @@ class PrintTree {
 		
 		if ($this->jquery) {
 			// we'll create the immediately invoked function and bind an event listener to the BODY tag. In order to cancel the click event on the A tag, we'll return FALSE in the jQuery event handler
-			$output = '<script type="text/javascript">(function($) { $(this).next("div.content").toggle(); return false; }); }(jQuery));</script>' . "\n<pre>" . $out . '</pre>';
+			$output = '<script type="text/javascript">(function($) { $(\'body\').on(\'click\', \'a.content_anchor\', function(){ $(this).next("div.content").toggle(); return false; }); }(jQuery));</script>' . "\n<pre>" . $out . '</pre>';
 		} else {
 			$output = '<script type="text/javascript">function toggleDisplay(id) { document.getElementById(id).style.display = (document.getElementById(id).style.display == "block") ? "none" : "block"; }</script>' . "\n<pre>" . $out . '</pre>';						
 		}
